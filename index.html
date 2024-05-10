@@ -6,12 +6,33 @@
 <title>RedNeck Soda Menu</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
-    body { background-color: #1a202c; color: #cbd5e0; }
-    h1, h2 { color: #7c53c7; }
-    ul li:hover { background-color: #2d3748; }
-    section + section { border-top: 2px solid #4a5568; padding-top: 1rem; margin-top: 1rem; }
-    .center { display: flex; justify-content: center; }
-    img { max-width: 100px; } /* Adjusts the size of the icon */
+    <style>
+    :root {
+        --background-color: #fff; /* Light mode background */
+        --text-color: #000; /* Light mode text */
+        --header-color: #4a5568; /* Light mode header */
+    }
+    .dark-mode {
+        --background-color: #1a202c; /* Dark mode background */
+        --text-color: #cbd5e0; /* Dark mode text */
+        --header-color: #ecc94b; /* Dark mode header */
+    }
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    h1, h2 {
+        color: var(--header-color);
+    }
+</style>
+</head>
+<body>
+<div class="container mx-auto px-4 py-8">
+    <button id="theme-toggle">Toggle Theme</button>
+    <h1 class="text-4xl font-bold text-center mb-8">RedNeck Soda Menu</h1>
+    <div class="center">
+        <img src="https://github.com/ronvallejo/rednecksoda/blob/0e8c898fe3d165541b934255f3ce6d101269fcb8/soda.png" alt="Soda Icon" style="max-width: 100px;">
+    </div>
 </style>
 </head>
 <body>
@@ -154,5 +175,32 @@
         <p>Mango, Piña Colada, Raspberry</p>
     </section>
 </div>
+<script>
+    const btn = document.getElementById('theme-toggle');
+    let darkMode = localStorage.getItem('darkMode');
+
+    const enableDarkMode = () => {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    };
+
+    const disableDarkMode = () => {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', null);
+    };
+
+    if (darkMode === 'enabled') {
+        enableDarkMode();
+    }
+
+    btn.addEventListener('click', () => {
+        darkMode = localStorage.getItem('darkMode');
+        if (darkMode !== 'enabled') {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+    });
+</script>
 </body>
 </html>
