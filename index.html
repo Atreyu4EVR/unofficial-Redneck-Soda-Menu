@@ -7,15 +7,20 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
     body { background-color: #1a202c; color: #cbd5e0; }
-    h1, h2, h3 { color: #7c53c7; }
+    h1, h2 { color: #7c53c7; }
     ul li:hover { background-color: #2d3748; }
     section + section { border-top: 2px solid #4a5568; padding-top: 1rem; margin-top: 1rem; }
+    .center { display: flex; justify-content: center; }
+    img { max-width: 100px; } /* Adjusts the size of the icon */
 </style>
 </head>
 <body>
 <div class="container mx-auto px-4 py-8">
     <h1 class="text-4xl font-bold text-center mb-8">RedNeck Soda Menu</h1>
-    
+    <div class="center">
+        <img src="https://github.com/ronvallejo/rednecksoda/blob/0e8c898fe3d165541b934255f3ce6d101269fcb8/soda.png" alt="Soda Icon">
+    </div>
+
     <section>
         <h2 class="text-2xl font-bold mb-4">🏔️ Mountain Dew Mixers:</h2>
         <ul class="list-disc pl-5">
