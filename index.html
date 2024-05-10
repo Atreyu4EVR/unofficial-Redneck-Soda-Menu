@@ -54,6 +54,35 @@
             cursor: pointer;
         }
 
+        body {
+            background-color: #1a202c;
+            color: #cbd5e0;
+        }
+
+        h1,
+        h2 {
+            color: #7c53c7;
+        }
+
+        ul li:hover {
+            background-color: #2d3748;
+        }
+
+        section+section {
+            border-top: 2px solid #4a5568;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            max-width: 100px;
+        }
+
         .theme-switch .handle {
             width: 20px;
             height: 20px;
@@ -91,6 +120,41 @@
         img {
             width: 50px;
             /* Icon size */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            h1,
+            h2 {
+                font-size: smaller;
+            }
+
+            .container {
+                padding: 2rem;
+            }
+
+            .theme-switch {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Hover effects */
+        li:hover {
+            background-color: var(--header-color);
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .theme-switch:hover {
+            background-color: var(--text-color);
+            transition: background-color 0.3s;
+        }
+
+        .theme-switch .handle:hover {
+            background-color: #e2e8f0;
         }
     </style>
 </head>
@@ -238,35 +302,35 @@
             <h2 class="text-2xl font-bold mb-4">🍍 Purées:</h2>
             <p>Mango, Piña Colada, Raspberry</p>
         </section>
-        </div>
-    </div>    
-        <script>
-            const toggle = document.getElementById('theme-toggle');
-            let darkMode = localStorage.getItem('darkMode');
+    </div>
+    </div>
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        let darkMode = localStorage.getItem('darkMode');
 
-            const enableDarkMode = () => {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            };
+        const enableDarkMode = () => {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        };
 
-            const disableDarkMode = () => {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', null);
-            };
+        const disableDarkMode = () => {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', null);
+        };
 
-            if (darkMode === 'enabled') {
+        if (darkMode === 'enabled') {
+            enableDarkMode();
+        }
+
+        toggle.addEventListener('click', () => {
+            darkMode = localStorage.getItem('darkMode');
+            if (darkMode !== 'enabled') {
                 enableDarkMode();
+            } else {
+                disableDarkMode();
             }
-
-            toggle.addEventListener('click', () => {
-                darkMode = localStorage.getItem('darkMode');
-                if (darkMode !== 'enabled') {
-                    enableDarkMode();
-                } else {
-                    disableDarkMode();
-                }
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
