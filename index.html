@@ -7,7 +7,7 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
     body { background-color: #1a202c; color: #cbd5e0; }
-    h1, h2 { color: #7c53c7; }
+    h1, h2, h3 { color: #7c53c7; }
     ul li:hover { background-color: #2d3748; }
     section + section { border-top: 2px solid #4a5568; padding-top: 1rem; margin-top: 1rem; }
 </style>
@@ -74,63 +74,75 @@
     </section>
     
     <section>
-        <h2 class="text-2xl font-bold mb-4">🍇 Syrup Flavors:</h2>
-        <h3 class="flex flex-row">Citrus Fruits</h3>
-        <ul class="basis-1/3">
-            <li>Blood Orange</li>
-            <li>Lemon Lime</li>
-            <li>Orange</li>
-            <li>Ruby Red Grapefruit</li>
-            <li>Tangerine</li>
-        </ul>
-    <h3 class="flex flex-row">Berries</h3>
-        <ul class="basis-1/3">
-            <li>Blackberry</li>
-            <li>Blueberry</li>
-            <li>Cranberry</li>
-            <li>Grape</li>
-            <li>Huckleberry</li>
-            <li>Raspberry</li>
-            <li>Red Raspberry</li>
-            <li>Strawberry</li>
-        </ul>
-    <h3 class="flex flex-row">Tropical Fruits</h3>
-        <ul class="basis-1/3">
-            <li>Blue Curacao</li>
-            <li>Coconut</li>
-            <li>Guava</li>
-            <li>Kiwi</li>
-            <li>Mango</li>
-            <li>Passion Fruit</li>
-            <li>Peach</li>
-            <li>Pina Colada</li>
-            <li>Pineapple</li>
-        </ul>
-    <h3 class="flex flex-row">Other Fruits</h3>
-        <ul class="basis-1/3">
-            <li>Apple</li>
-            <li>Cherry</li>
-            <li>Green Apple</li>
-            <li>Pomegranate</li>
-            <li>Watermelon</li>
-        </ul>
-    <h3 class="flex flex-row">Non-Fruit Flavors</h3>
-        <ul class="basis-1/3">
-            <li>Blue Raspberry</li>
-            <li>Butterscotch</li>
-            <li>Caramel</li>
-            <li>Cinnamon</li>
-            <li>Cupcake</li>
-            <li>Gingerbread</li>
-            <li>Lavender</li>
-            <li>Macadamia Nut</li>
-            <li>Peppermint</li>
-            <li>Pumpkin Spice</li>
-            <li>Sour Candy</li>
-            <li>Toasted Marshmallow</li>
-            <li>Vanilla</li>
-        </ul>
-    </section>
+            <h2 class="text-2xl font-bold mb-4">🍇 Syrup Flavors:</h2>
+            <div class="flex flex-row flex-wrap">
+                <div class="w-1/3 p-2">
+                    <h3>Citrus Fruits</h3>
+                    <ul>
+                        <li>Blood Orange</li>
+                        <li>Lemon Lime</li>
+                        <li>Orange</li>
+                        <li>Ruby Red Grapefruit</li>
+                        <li>Tangerine</li>
+                    </ul>
+                </div>
+                <div class="w-1/3 p-2">
+                    <h3>Berries</h3>
+                    <ul>
+                        <li>Blackberry</li>
+                        <li>Blueberry</li>
+                        <li>Cranberry</li>
+                        <li>Grape</li>
+                        <li>Huckleberry</li>
+                        <li>Raspberry</li>
+                        <li>Red Raspberry</li>
+                        <li>Strawberry</li>
+                    </ul>
+                </div>
+                <div class="w-1/3 p-2">
+                    <h3>Tropical Fruits</h3>
+                    <ul>
+                        <li>Blue Curacao</li>
+                        <li>Coconut</li>
+                        <li>Guava</li>
+                        <li>Kiwi</li>
+                        <li>Mango</li>
+                        <li>Passion Fruit</li>
+                        <li>Peach</li>
+                        <li>Pina Colada</li>
+                        <li>Pineapple</li>
+                    </ul>
+                </div>
+                <div class="w-1/3 p-2">
+                    <h3>Other Fruits</h3>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Cherry</li>
+                        <li>Green Apple</li>
+                        <li>Pomegranate</li>
+                        <li>Watermelon</li>
+                    </ul>
+                </div>
+                <div class="w-1/3 p-2">
+                    <h3>Non-Fruit Flavors</h3>
+                    <ul>
+                        <li>Blue Raspberry</li>
+                        <li>Butterscotch</li>
+                        <li>Caramel</li>
+                        <li>Cinnamon</li>
+                        <li>Cupcake</li>
+                        <li>Gingerbread</li>
+                        <li>Lavender</li>
+                        <li>Macadamia Nut</li>
+                        <li>Peppermint</li>
+                        <li>Pumpkin Spice</li>
+                        <li>Sour Candy</li>
+                        <li>Toasted Marshmallow</li>
+                        <li>Vanilla</li>
+                    </ul>
+                </div>
+            </div>
+        </section>        
 
     <section>
         <h2 class="text-2xl font-bold mb-4">🍍 Purées:</h2>
