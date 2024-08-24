@@ -17,6 +17,9 @@ This website is a static, mobile-friendly menu that lists all of the soda option
 
 Feel free to browse the menu to find your next favorite soda combination. Whether you're a local or just passing through Rexburg, this site is designed to help you quickly see what's available before you head over to Redneck Soda.
 
+The webpage can be found by going to: [https://ronvallejo.github.io/Redneck-Soda-Menu/](https://ronvallejo.github.io/Redneck-Soda-Menu/)
+
+
 ## Disclaimer
 
 This website is not affiliated with or endorsed by Redneck Soda. The information provided here is for reference only and may not reflect the most up-to-date menu offerings. We recommend checking directly with Redneck Soda for the latest information.
