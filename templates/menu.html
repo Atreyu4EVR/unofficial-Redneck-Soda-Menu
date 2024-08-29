@@ -123,147 +123,23 @@
         <h1 class="text-4xl font-extrabold text-center mb-8">Redneck Soda Menu</h1>
         <section><p>Bridget's favorites ♥️</p></section>
         
-        
+        {% for category, drinks in menu.items() %}
         <section>
             <h2 class="text-2xl font-bold mb-3">
-                🏔️
-                
-                Mountain Dew Mixers
+                {% if category == "Mountain Dew Mixers" %}🏔️
+                {% elif category == "Dr. Pepper Delights" %}🥤
+                {% elif category == "Root Beer & More" %}🍺
+                {% elif category == "Lemonade Lineup" %}🍋
+                {% endif %}
+                {{ category }}
             </h2>
             <ul class="list-disc pl-3">
-                
-                <li><strong>Victoria&#39;s &#34;Not So&#34; Secret:</strong> Mango, Passion Fruit, Strawberry</li>
-                
-                <li><strong>Florida Georgia Line:</strong> Strawberry, Peach, Cream</li>
-                
-                <li><strong>Skinny Dippin&#39;:</strong> Peach, Raspberry, Strawberry, Cream</li>
-                
-                <li><strong>Over Yonder:</strong> Mango, Peach</li>
-                
-                <li><strong>Dahomie:</strong> Huckleberry, Blueberry, Raspberry, Cream</li>
-                
-                <li><strong>Drunk On Soda:</strong> Vanilla, Cream</li>
-                
-                <li><strong>Southern Comfort:</strong> Coconut, Pineapple, Cream</li>
-                
-                <li><strong>Johnny Lingo:</strong> Blackberry, Peach, Vanilla, Cream</li>
-                
-                <li><strong>Cup of Heaven:</strong> Blue Raspberry, Peach, Vanilla, Cream</li>
-                
-                <li><strong>Dew Down Under:</strong> Huckleberry, Blackberry, Cream</li>
-                
-                <li><strong>Michelley Belly:</strong> Blue Powerade, Peach, Strawberry, Cream</li>
-                
-                <li><strong>The Mistake:</strong> Raspberry, Pina Colada, Cream, Apple</li>
-                
-                <li><strong>Totally Beachin&#39;:</strong> Pina Colada, Strawberry, Watermelon</li>
-                
+                {% for drink in drinks %}
+                <li><strong>{{ drink.name }}:</strong> {{ drink.flavors }}</li>
+                {% endfor %}
             </ul>
         </section>
-        
-        <section>
-            <h2 class="text-2xl font-bold mb-3">
-                🥤
-                
-                Dr. Pepper Delights
-            </h2>
-            <ul class="list-disc pl-3">
-                
-                <li><strong>Blue French Horn:</strong> Blackberry, Pineapple, Vanilla</li>
-                
-                <li><strong>Razmaspazz:</strong> Coconut, Raspberry, Cream, Apple</li>
-                
-                <li><strong>Gator Bite:</strong> Strawberry, Coconut</li>
-                
-                <li><strong>Trailer Park Princess:</strong> Peach, Vanilla, Cream</li>
-                
-                <li><strong>Redneck Barbie:</strong> Tangerine, Passion Fruit</li>
-                
-                <li><strong>Skeeter Bite:</strong> Coconut, Peach, Mango</li>
-                
-                <li><strong>Midnight Snack:</strong> Lime, Pomegranate, Cream</li>
-                
-                <li><strong>Big Green Tractor:</strong> Green Apple, Peach</li>
-                
-                <li><strong>Dirty Swamp Rat:</strong> Coconut, Fresh Lime</li>
-                
-                <li><strong>Eliza&#39;s Shortcake:</strong> Cupcake, Strawberry, Cream</li>
-                
-            </ul>
-        </section>
-        
-        <section>
-            <h2 class="text-2xl font-bold mb-3">
-                🍺
-                
-                Root Beer &amp; More
-            </h2>
-            <ul class="list-disc pl-3">
-                
-                <li><strong>Miss Tylo:</strong> Vanilla, Strawberry, Cream</li>
-                
-                <li><strong>Are You Serious Clark:</strong> Vanilla, Strawberry, Cream</li>
-                
-                <li><strong>Cherri Cherry:</strong> SF Black Cherry, Vanilla, Cream</li>
-                
-                <li><strong>Drives Me Nuts:</strong> Macadamia Nut, Vanilla, Cream</li>
-                
-                <li><strong>The Cyd:</strong> Cinnamon, Vanilla, Cream</li>
-                
-                <li><strong>Shootin&#39; Rooties:</strong> Cupcake, Orange, Blackberry</li>
-                
-            </ul>
-        </section>
-        
-        <section>
-            <h2 class="text-2xl font-bold mb-3">
-                🍋
-                
-                Lemonade Lineup
-            </h2>
-            <ul class="list-disc pl-3">
-                
-                <li><strong>Fruit Tonic:</strong> Huckleberry, Guava, Mango, Watermelon, Raspberry</li>
-                
-                <li><strong>Pretty Piggy:</strong> Coconut, Watermelon</li>
-                
-                <li><strong>Lightning Bug:</strong> Mango, Passion Fruit, Tangerine</li>
-                
-                <li><strong>Kissin&#39; Kin:</strong> Ruby Red Grapefruit, Raspberry, Vanilla</li>
-                
-            </ul>
-        </section>
-        
-        <section>
-            <h2 class="text-2xl font-bold mb-3">
-                
-                Redneck Waters
-            </h2>
-            <ul class="list-disc pl-3">
-                
-                <li><strong>Bayou Blues:</strong> Peach, Pineapple</li>
-                
-                <li><strong>Solo Cup:</strong> Coconut, Cream, Huckleberry, Pineapple</li>
-                
-                <li><strong>Southern Belle:</strong> Passion Fruit, Ruby Red Grapefruit, Blackberry</li>
-                
-                <li><strong>Squatch Huntin&#39; :</strong> Lavender, Fresh Lime, Coconut, Vanilla, Cream</li>
-                
-                <li><strong>Wet N&#39; Wild:</strong> Guava, Green Apple, Pineapple, Mango, Watermelon, Blackberry</li>
-                
-                <li><strong>River Water:</strong> Raspberry</li>
-                
-                <li><strong>Bless Your Heart:</strong> Blue Raspberry, Grape, Peppermint, Guava, Sour Candy</li>
-                
-                <li><strong>Bubba Mae:</strong> Blackberry, Pomegranate, Fresh Lime, Coconut, Cream</li>
-                
-                <li><strong>Jolly Farmer:</strong> Blue Raspberry, Red Raspberry, Raspberry</li>
-                
-                <li><strong>Redneck Yacht Club (+$0.79):</strong> Pineapple, Strawberry Purée, Coconut, Cream</li>
-                
-            </ul>
-        </section>
-        
+        {% endfor %}
         <section>
             <h2 class="text-2xl font-bold mb-3">Syrup Flavors 🍇</h2>
             <div class="flex flex-wrap">

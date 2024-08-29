@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Setup Google Sheets API
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-SERVICE_ACCOUNT_FILE = 'token.json'
+SERVICE_ACCOUNT_FILE = '.secrets/token.json'
 RANGE_NAME = 'Menu!A2:D999'  # Assumes your data starts from A2
 
 # Create credentials using the service account file
@@ -47,7 +47,7 @@ def get_menu_from_sheet():
 
 @app.route('/favicon.svg')
 def favicon():
-    return send_file('static/favicon.svg', mimetype='image/svg+xml')
+    return send_file('static/favicon.svg', mimetype='image/svg+xml') # type: ignore
 
 @app.route('/')
 def menu():
