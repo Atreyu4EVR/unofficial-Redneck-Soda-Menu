@@ -1,10 +1,10 @@
 [![Redneck Soda Logo](images/redneck_logo.png)](https://www.greatscottsstores.com/locations/idaho/rexburg/39-s-2nd-w)
 
-# Redneck Soda Menu
+# Unofficial Redneck Soda Menu
 
 Welcome to the unofficial **Redneck Soda Menu** website! This site was created out of a love for the delicious and unique soda offerings from Redneck Soda in Rexburg, ID. My wife and I often enjoy their drinks but noticed that it was difficult to find an online menu, so we decided to make one ourselves with it hosted in Github Pages.
 
-**Menu**: [ronvallejo.github.io/Redneck-Soda-Menu/](https://ronvallejo.github.io/Redneck-Soda-Menu/)
+**Menu**: [www.unofficialredneckmenu.online](https://unofficialredneckmenu.online/)
 **Feedback**: [github.com/ronvallejo/Redneck-Soda-Menu/discussions/1](https://github.com/ronvallejo/Redneck-Soda-Menu/discussions/1)
 
 ## About This Project
