@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedNeck Soda Menu</title>
+    <title>Unofficial RedNeck Soda Menu</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥤</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KXZJPHNR');</script>
-    <!-- End Google Tag Manager -->
     <style>
         :root {
             --background-color: #fff;  /* Light mode background */
-            --text-color: #000;  /* Light mode text */
-            --header-color: #4a5568;  /* Light mode header */
-            --dark-background-color: #1a202c;  /* Dark mode background */
+            --text-color: #47647f;  /* Light mode text */
+            --header-color: #c60000;  /* Light mode header */
+            --dark-background-color: #121a22;  /* Dark mode background */
             --dark-text-color: #cbd5e0;  /* Dark mode text */
-            --dark-header-color: #ecc94b;  /* Dark mode header */
+            --dark-header-color: #c60000;  /* Dark mode header */
         }
 
         body {
@@ -39,6 +33,10 @@
             color: var(--header-color);
         }
 
+        h2 {
+            margin-top: 15px;
+        }
+
         .theme-switch {
             position: absolute;
             top: 20px;
@@ -48,7 +46,7 @@
             justify-content: space-between;
             width: 50px;
             height: 25px;
-            background: var(--header-color);
+            background: var(--header-color); /* This is likely the color that changes with the theme */
             border-radius: 50px;
             padding: 5px;
             cursor: pointer;
@@ -57,18 +55,33 @@
         .theme-switch .handle {
             width: 20px;
             height: 20px;
-            background-color: #fff;
+            background-color: #fff; /* Default handle color */
             border-radius: 50%;
             position: relative;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s; /* Transition added for background-color */
         }
 
+        /* When dark mode is active, move the handle */
         .dark-mode .theme-switch .handle {
             transform: translateX(25px);
         }
 
+        /* Ensure the handle remains visible in dark mode */
+        .dark-mode .theme-switch .handle {
+            background-color: #fff; /* Ensure the handle stays white in dark mode */
+        }
+
+        /* Optional: Adjust the background color of the switch in dark mode */
+        .dark-mode .theme-switch {
+            background: #333; /* Darker background for the switch */
+        }
+
         img {
             width: 50px;  /* Icon size */
+        }
+
+        ul li {
+            list-style-type: none;
         }
 
         @media (max-width: 768px) {
@@ -76,166 +89,243 @@
                 font-size: smaller;
             }
             .theme-switch {
-                top: 10px;
-                right: 10px;
+                top: 30px;
+                right: 25px;
             }
         }
 
-        ul li:hover, .theme-switch:hover, .theme-switch .handle:hover {
+        ul li:hover {
             background-color: var(--header-color);
+            list-style-type: none;
             color: #ffffff;
             transition: background-color 0.3s, color 0.3s;
         }
     </style>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXZJPHNR');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZJPHNR"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZJPHNR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container mx-auto px-8 py-12">
         <div class="theme-switch" id="theme-toggle">
             <div class="handle"></div>
         </div>
-        <h1 class="text-4xl font-bold text-center mb-8">
-            RedNeck Soda
-        </h1>
-        <section><p><3 indicates Bridget favorite</p></section>
+        <h2 class="text-3xl font-medium italic text-center mb-0">unofficial</h2>
+        <h1 class="text-4xl font-extrabold text-center mb-8">Redneck Soda Menu</h1>
+        <section><p>Bridget's favorites ♥️</p></section>
+        
+        
         <section>
-            <h2 class="text-2xl font-bold mb-4">🏔️ Mountain Dew Mixers:</h2>
-            <ul class="list-disc pl-5">
-                <li><strong>Victoria's "Not So" Secret:</strong> Mango, Passion Fruit, Strawberry</li>
+            <h2 class="text-2xl font-bold mb-3">
+                🏔️
+                
+                Mountain Dew Mixers
+            </h2>
+            <ul class="list-disc pl-3">
+                
+                <li><strong>Victoria&#39;s &#34;Not So&#34; Secret:</strong> Mango, Passion Fruit, Strawberry</li>
+                
                 <li><strong>Florida Georgia Line:</strong> Strawberry, Peach, Cream</li>
-                <li><strong>Skinny Dippin':</strong> Peach, Raspberry, Strawberry, Cream</li>
-                <li><strong>Over Yonder:</strong> Mango, Peach <3</li>
+                
+                <li><strong>Skinny Dippin&#39;:</strong> Peach, Raspberry, Strawberry, Cream</li>
+                
+                <li><strong>Over Yonder:</strong> Mango, Peach</li>
+                
                 <li><strong>Dahomie:</strong> Huckleberry, Blueberry, Raspberry, Cream</li>
+                
                 <li><strong>Drunk On Soda:</strong> Vanilla, Cream</li>
+                
                 <li><strong>Southern Comfort:</strong> Coconut, Pineapple, Cream</li>
+                
                 <li><strong>Johnny Lingo:</strong> Blackberry, Peach, Vanilla, Cream</li>
+                
                 <li><strong>Cup of Heaven:</strong> Blue Raspberry, Peach, Vanilla, Cream</li>
+                
                 <li><strong>Dew Down Under:</strong> Huckleberry, Blackberry, Cream</li>
-                <li><strong>Michelley Belly:</strong> 1/2 Blue Powerade, 1/2 Mtn Dew, Peach, Strawberry, Cream</li>
-                <li><strong>The Mistake:</strong> Raspberry, Pina Colada, Cream</li>
-                <li><strong>Totally Beachin':</strong> Pina Colada, Strawberry, Watermelon</li>
+                
+                <li><strong>Michelley Belly:</strong> Blue Powerade, Peach, Strawberry, Cream</li>
+                
+                <li><strong>The Mistake:</strong> Raspberry, Pina Colada, Cream, Apple</li>
+                
+                <li><strong>Totally Beachin&#39;:</strong> Pina Colada, Strawberry, Watermelon</li>
+                
             </ul>
         </section>
-
+        
         <section>
-            <h2 class="text-2xl font-bold mb-4">🥤 Dr. Pepper Delights:</h2>
-            <ul class="list-disc pl-5">
+            <h2 class="text-2xl font-bold mb-3">
+                🥤
+                
+                Dr. Pepper Delights
+            </h2>
+            <ul class="list-disc pl-3">
+                
                 <li><strong>Blue French Horn:</strong> Blackberry, Pineapple, Vanilla</li>
-                <li><strong>Razmaspazz:</strong> Coconut, Raspberry, Cream</li>
+                
+                <li><strong>Razmaspazz:</strong> Coconut, Raspberry, Cream, Apple</li>
+                
                 <li><strong>Gator Bite:</strong> Strawberry, Coconut</li>
+                
                 <li><strong>Trailer Park Princess:</strong> Peach, Vanilla, Cream</li>
-                <li><strong>Redneck Barbie:</strong> Passion Fruit, Tangerine</li>
+                
+                <li><strong>Redneck Barbie:</strong> Tangerine, Passion Fruit</li>
+                
                 <li><strong>Skeeter Bite:</strong> Coconut, Peach, Mango</li>
+                
                 <li><strong>Midnight Snack:</strong> Lime, Pomegranate, Cream</li>
+                
                 <li><strong>Big Green Tractor:</strong> Green Apple, Peach</li>
+                
                 <li><strong>Dirty Swamp Rat:</strong> Coconut, Fresh Lime</li>
-                <li><strong>Eliza's Shortcake:</strong> Cupcake, Strawberry, Cream</li>
+                
+                <li><strong>Eliza&#39;s Shortcake:</strong> Cupcake, Strawberry, Cream</li>
+                
             </ul>
         </section>
-
+        
         <section>
-            <h2 class="text-2xl font-bold mb-4">🍺 Root Beer & More:</h2>
-            <ul class="list-disc pl-5">
+            <h2 class="text-2xl font-bold mb-3">
+                🍺
+                
+                Root Beer &amp; More
+            </h2>
+            <ul class="list-disc pl-3">
+                
                 <li><strong>Miss Tylo:</strong> Vanilla, Strawberry, Cream</li>
+                
                 <li><strong>Are You Serious Clark:</strong> Vanilla, Strawberry, Cream</li>
+                
                 <li><strong>Cherri Cherry:</strong> SF Black Cherry, Vanilla, Cream</li>
+                
                 <li><strong>Drives Me Nuts:</strong> Macadamia Nut, Vanilla, Cream</li>
+                
                 <li><strong>The Cyd:</strong> Cinnamon, Vanilla, Cream</li>
-                <li><strong>Shootin' Rooties:</strong> Cupcake, Orange</li>
+                
+                <li><strong>Shootin&#39; Rooties:</strong> Cupcake, Orange, Blackberry</li>
+                
             </ul>
         </section>
-
+        
         <section>
-            <h2 class="text-2xl font-bold mb-4">🍋 Lemonade Lineup:</h2>
-            <ul class="list-disc pl-5">
-                <li><strong>Fruit Tonic:</strong> Huckleberry, Guava, Mango, Raspberry, Watermelon</li>
+            <h2 class="text-2xl font-bold mb-3">
+                🍋
+                
+                Lemonade Lineup
+            </h2>
+            <ul class="list-disc pl-3">
+                
+                <li><strong>Fruit Tonic:</strong> Huckleberry, Guava, Mango, Watermelon, Raspberry</li>
+                
                 <li><strong>Pretty Piggy:</strong> Coconut, Watermelon</li>
+                
                 <li><strong>Lightning Bug:</strong> Mango, Passion Fruit, Tangerine</li>
-                <li><strong>Kissin' Kin:</strong> Ruby Red Grapefruit, Raspberry, Vanilla</li>
+                
+                <li><strong>Kissin&#39; Kin:</strong> Ruby Red Grapefruit, Raspberry, Vanilla</li>
+                
             </ul>
         </section>
-
+        
         <section>
-            <h2 class="text-2xl font-bold mb-4">🍇 Syrup Flavors:</h2>
-            <div class="flex flex-row flex-wrap">
-                <div class="w-1/3 p-2">
-                    <h3>Citrus Fruits</h3>
-                    <ul>
-                        <li>Blood Orange</li>
-                        <li>Lemon Lime</li>
-                        <li>Orange</li>
-                        <li>Ruby Red Grapefruit</li>
-                        <li>Tangerine</li>
-                    </ul>
-                </div>
-                <div class="w-1/3 p-2">
-                    <h3>Berries</h3>
-                    <ul>
+            <h2 class="text-2xl font-bold mb-3">
+                
+                Redneck Waters
+            </h2>
+            <ul class="list-disc pl-3">
+                
+                <li><strong>Bayou Blues:</strong> Peach, Pineapple</li>
+                
+                <li><strong>Solo Cup:</strong> Coconut, Cream, Huckleberry, Pineapple</li>
+                
+                <li><strong>Southern Belle:</strong> Passion Fruit, Ruby Red Grapefruit, Blackberry</li>
+                
+                <li><strong>Squatch Huntin&#39; :</strong> Lavender, Fresh Lime, Coconut, Vanilla, Cream</li>
+                
+                <li><strong>Wet N&#39; Wild:</strong> Guava, Green Apple, Pineapple, Mango, Watermelon, Blackberry</li>
+                
+                <li><strong>River Water:</strong> Raspberry</li>
+                
+                <li><strong>Bless Your Heart:</strong> Blue Raspberry, Grape, Peppermint, Guava, Sour Candy</li>
+                
+                <li><strong>Bubba Mae:</strong> Blackberry, Pomegranate, Fresh Lime, Coconut, Cream</li>
+                
+                <li><strong>Jolly Farmer:</strong> Blue Raspberry, Red Raspberry, Raspberry</li>
+                
+                <li><strong>Redneck Yacht Club (+$0.79):</strong> Pineapple, Strawberry Purée, Coconut, Cream</li>
+                
+            </ul>
+        </section>
+        
+        <section>
+            <h2 class="text-2xl font-bold mb-3">Syrup Flavors 🍇</h2>
+            <div class="flex flex-wrap">
+                <div class="w-1/2">
+                    <ul class="list-disc pl-5">
+                        <li>Apple</li>
                         <li>Blackberry</li>
+                        <li>Blood Orange</li>
+                        <li>Blue Curacao</li>
+                        <li>Blue Raspberry</li>
                         <li>Blueberry</li>
+                        <li>Butterscotch</li>
+                        <li>Caramel</li>
+                        <li>Cherry</li>
+                        <li>Cinnamon</li>
+                        <li>Coconut</li>
                         <li>Cranberry</li>
+                        <li>Cupcake</li>
+                        <li>Gingerbread</li>
                         <li>Grape</li>
+                        <li>Green Apple</li>
+                        <li>Guava</li>
                         <li>Huckleberry</li>
-                        <li>Raspberry</li>
-                        <li>Red Raspberry</li>
-                        <li>Strawberry</li>
+                        <li>Kiwi</li>
+                        <li>Lavender</li>
                     </ul>
                 </div>
-                <div class="w-1/3 p-2">
-                    <h3>Tropical Fruits</h3>
+                <div class="w-1/2">
                     <ul>
-                        <li>Blue Curacao</li>
-                        <li>Coconut</li>
-                        <li>Guava</li>
-                        <li>Kiwi</li>
+                        <li>Lemon Lime</li>
+                        <li>Macadamia Nut</li>
                         <li>Mango</li>
                         <li>Passion Fruit</li>
                         <li>Peach</li>
+                        <li>Peppermint</li>
                         <li>Pina Colada</li>
                         <li>Pineapple</li>
-                    </ul>
-                </div>
-                <div class="w-1/3 p-2">
-                    <h3>Other Fruits</h3>
-                    <ul>
-                        <li>Apple</li>
-                        <li>Cherry</li>
-                        <li>Green Apple</li>
                         <li>Pomegranate</li>
-                        <li>Watermelon</li>
-                    </ul>
-                </div>
-                <div class="w-1/3 p-2">
-                    <h3>Non-Fruit Flavors</h3>
-                    <ul>
-                        <li>Blue Raspberry</li>
-                        <li>Butterscotch</li>
-                        <li>Caramel</li>
-                        <li>Cinnamon</li>
-                        <li>Cupcake</li>
-                        <li>Gingerbread</li>
-                        <li>Lavender</li>
-                        <li>Macadamia Nut</li>
-                        <li>Peppermint</li>
                         <li>Pumpkin Spice</li>
+                        <li>Raspberry</li>
+                        <li>Red Raspberry</li>
+                        <li>Ruby Red Grapefruit</li>
                         <li>Sour Candy</li>
+                        <li>Strawberry</li>
+                        <li>Tangerine</li>
                         <li>Toasted Marshmallow</li>
                         <li>Vanilla</li>
+                        <li>Watermelon</li>
                     </ul>
                 </div>
             </div>
         </section>
-
         <section>
-            <h2 class="text-2xl font-bold mb-4">🍍 Purées:</h2>
-            <p>Mango, Piña Colada, Raspberry, Strawberry</p>
+            <h2 class="text-2xl font-bold mb-4">Purées 🍍</h2>
+            <div class="w-1/3 p-2">
+                <ul class="list-disc pl-5">
+                    <li>Mango</li>
+                    <li>Piña Colada</li>
+                </ul>
         </section>
     </div>
-    </div>
+</div>
     <script>
         const toggle = document.getElementById('theme-toggle');
         toggle.addEventListener('click', () => {
