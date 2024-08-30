@@ -20,7 +20,10 @@
             background-color: var(--background-color);
             color: var(--text-color);
             transition: background-color 0.3s, color 0.3s;
-            padding: 20px; /* Ensures content does not touch the edges */
+        }
+
+        main {
+            padding: 20px;  /* Ensures content does not touch the edges */
         }
 
         .dark-mode {
@@ -115,6 +118,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZJPHNR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <main> 
     <div class="container mx-auto px-8 py-12">
         <div class="theme-switch" id="theme-toggle">
             <div class="handle"></div>
@@ -202,6 +206,42 @@
         </section>
     </div>
 </div>
+</main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 w-full">
+        <div class="px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About</h4>
+                    <p class="text-base font-light">Welcome to the unofficial Redneck Soda Menu website. This website is an independently created and maintained resource designed to help the community access and view the menu of sodas and products offered by Redneck Soda in Rexburg, Idaho. The information on this site is provided as a public service and is intended for informational purposes only.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="disclaimer/index.html" class="hover:text-gray-300">Disclaimer</a></li>
+                        <li><a href="https://github.com/ronvallejo/Redneck-Soda-Menu/discussions/1" class="hover:text-gray-300">Contributing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><p class="hover:text-gray-300">Email: unofficalredneckmenu@gmail.com</p></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>© 2024 Unofficial Redneck Soda Menu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <script>
         const toggle = document.getElementById('theme-toggle');
         toggle.addEventListener('click', () => {
