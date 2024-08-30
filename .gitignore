@@ -11,6 +11,10 @@ __pycache__/
 env/
 venv/
 
+# Ignore secrets
+.secrets/
+token.json
+
 # Ignore virtual environment folders
 *.egg-info/
 pip-log.txt
