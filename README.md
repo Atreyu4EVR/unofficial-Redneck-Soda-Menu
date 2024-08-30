@@ -4,7 +4,7 @@
 
 Welcome to the **Official Repository** for the **unofficial Redneck Soda Menu**! The unofficial Redneck Soda Menu was created out of a love for the delicious and unique soda offerings from Redneck Soda in Rexburg, ID. My wife and I often enjoy their drinks but noticed that it was difficult to find an online menu, so we decided to make one ourselves and host on Github Pages.
 
-**Menu**: [www.unofficialredneckmenu.online](https://unofficialredneckmenu.online/)
+> Visit the site [www.unofficialredneckmenu.online](https://unofficialredneckmenu.online/)
 
 ## About This Project
 
