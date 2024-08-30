@@ -1,20 +1,19 @@
-[![Redneck Soda Logo](images/redneck_logo.png)](https://www.greatscottsstores.com/locations/idaho/rexburg/39-s-2nd-w)
+[![unofficialLogo](images/unofficialLogo.png)](https://unofficialredneckmenu.online/)
 
-# Unofficial Redneck Soda Menu
+# unofficial Redneck Soda Menu
 
-Welcome to the unofficial **Redneck Soda Menu** website! This site was created out of a love for the delicious and unique soda offerings from Redneck Soda in Rexburg, ID. My wife and I often enjoy their drinks but noticed that it was difficult to find an online menu, so we decided to make one ourselves with it hosted in Github Pages.
+Welcome to the **Official Repository** for the **unofficial Redneck Soda Menu**! The unofficial Redneck Soda Menu was created out of a love for the delicious and unique soda offerings from Redneck Soda in Rexburg, ID. My wife and I often enjoy their drinks but noticed that it was difficult to find an online menu, so we decided to make one ourselves and host on Github Pages.
 
 **Menu**: [www.unofficialredneckmenu.online](https://unofficialredneckmenu.online/)
-**Feedback**: [github.com/ronvallejo/Redneck-Soda-Menu/discussions/1](https://github.com/ronvallejo/Redneck-Soda-Menu/discussions/1)
 
 ## About This Project
 
-This website is a static, mobile-friendly menu that lists all of the soda options currently available on the menu sign at Redneck Soda. While this site was created from scratch and is designed to be as accurate as possible, please note that it is static—meaning that the information may become outdated over time as the menu changes.
+This website is a semi-static, mobile-friendly menu that lists all of the soda options currently available on the menu sign at Redneck Soda. The application use to build the menu was created using Flask, a lightweight web framework for Python that allows you to build web applications quickly and with minimal overhead. The main file, "app.py" uses Google Sheets API's to fetch the menu items we list from a spreadsheet using Google Sheets. The menu was originally designed with simple HTML, CSS, and JS. But, each time there was a change in the menu, I had to manually update the code. That became old real quick. So I rebuilt the menu in Python using Flask, so I could simply run the script and have it automatically update the webpage. The site is hosted on Github Pages with a custom domain. 
 
 ### Key Features:
-- **Comprehensive Soda List:** All sodas listed are based on the current menu sign displayed at Redneck Soda.
-- **Mobile-Friendly:** The site is optimized for easy viewing and navigation on mobile devices.
-- **Simple & Lightweight:** The website is made from scratch using basic HTML, CSS, and JavaScript, ensuring fast load times.
+- **Comprehensive Soda List:** All sodas listed are based on the current menu sign displayed at Redneck Soda in Rexburg, ID.
+- **Mobile-Friendly:** The site is optimized for easy viewing and navigation on mobile devices using Tailwind CSS.
+- **Simple & Lightweight:** The website is built with Flask which outputs simple HTML, CSS, and JavaScript, ensuring fast load times.
 
 ## Usage
 
@@ -26,7 +25,7 @@ This website is not affiliated with or endorsed by Redneck Soda. The information
 
 ## Contributions
 
-Since this site is static, it might not always have the latest menu updates. If you're a fan of Redneck Soda and want to contribute by providing updated menu information, feel free to leave feedback on our **[Feedback page](https://github.com/ronvallejo/Redneck-Soda-Menu/discussions/1)**.
+Since this site is mostly static, it might not always have the latest menu updates. If you're a fan of Redneck Soda and want to contribute by providing updated menu information, feel free to use our feedback form: **[Send us feedback!](https://forms.gle/dLCSiHa66eu9bgfE8)**.
 
 ## License
 
