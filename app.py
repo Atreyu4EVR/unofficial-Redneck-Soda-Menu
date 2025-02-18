@@ -10,11 +10,11 @@ def get_menu_from_csv():
         'drinks': defaultdict(list),
         'energy_drinks': defaultdict(list),
         'waters': defaultdict(list),
-        'sodas': [],
-        'syrups': [],
-        'sugar_free_syrups': [],
-        'purees': [],
-        'creams': []
+        'sodas': defaultdict(list),
+        'syrups': defaultdict(list),
+        'sugar_free_syrups': defaultdict(list),
+        'purees': defaultdict(list),
+        'creams': defaultdict(list)
     }
     
     current_category = None
@@ -32,7 +32,7 @@ def get_menu_from_csv():
                 category = row[0].strip() if len(row) > 0 else current_category
                 name = row[1].strip() if len(row) > 1 else ""
                 ingredients = row[2].strip() if len(row) > 2 else ""
-                base = row[3].strip() if len(row) > 3 else ""
+                base = row[3].strip() if len(row) > 3 else "Regular"
                 
                 if not category:  # Skip rows without category
                     continue
@@ -47,19 +47,39 @@ def get_menu_from_csv():
                 elif 'redneck water' in category_lower:
                     menu_section = menu['waters']
                 elif 'sodas' in category_lower:
-                    menu['sodas'].append(name)
+                    menu_section = menu['sodas']
+                    menu_section[base].append({
+                        "name": name,
+                        "ingredients": ingredients
+                    })
                 elif 'syrup flavors' in category_lower:
-                    menu['syrups'].append(name)
+                    menu_section = menu['syrups']
+                    menu_section[base].append({
+                        "name": name,
+                        "ingredients": ingredients
+                    })
                 elif 'sugar free syrups' in category_lower:
-                    menu['sugar_free_syrups'].append(name)
+                    menu_section = menu['sugar_free_syrups']
+                    menu_section[base].append({
+                        "name": name,
+                        "ingredients": ingredients
+                    })
                 elif 'purees' in category_lower:
-                    menu['purees'].append(name)
+                    menu_section = menu['purees']
+                    menu_section[base].append({
+                        "name": name,
+                        "ingredients": ingredients
+                    })
                 elif 'creams' in category_lower:
-                    menu['creams'].append(name)
+                    menu_section = menu['creams']
+                    menu_section[base].append({
+                        "name": name,
+                        "ingredients": ingredients
+                    })
                 else:
                     continue
                     
-                if isinstance(menu_section, defaultdict) and name:
+                if isinstance(menu_section, defaultdict) and name and 'redneck' in category_lower:
                     menu_section[base].append({
                         "name": name,
                         "ingredients": ingredients

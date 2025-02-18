@@ -204,51 +204,61 @@
           <!-- Sodas -->
           <section>
             <h2 class="text-2xl font-bold mb-3">Sodas</h2>
+            {% for base, items in menu.sodas.items() %}
             <ul class="list-disc pl-5">
-              {% for soda in menu.sodas %}
-              <li>{{ soda }}</li>
+              {% for item in items %}
+              <li>{{ item.name }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
           </section>
 
           <!-- Syrups -->
           <section>
             <h2 class="text-2xl font-bold mb-3">Syrup Flavors</h2>
+            {% for base, items in menu.syrups.items() %}
             <ul class="list-disc pl-5">
-              {% for syrup in menu.syrups %}
-              <li>{{ syrup }}</li>
+              {% for item in items %}
+              <li>{{ item.name }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
           </section>
 
           <!-- Sugar Free Syrups -->
           <section>
             <h2 class="text-2xl font-bold mb-3">Sugar Free Syrups</h2>
+            {% for base, items in menu.sugar_free_syrups.items() %}
             <ul class="list-disc pl-5">
-              {% for syrup in menu.sugar_free_syrups %}
-              <li>{{ syrup }}</li>
+              {% for item in items %}
+              <li>{{ item.name }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
           </section>
 
           <!-- Purees -->
           <section>
             <h2 class="text-2xl font-bold mb-3">Purées</h2>
+            {% for base, items in menu.purees.items() %}
             <ul class="list-disc pl-5">
-              {% for puree in menu.purees %}
-              <li>{{ puree }}</li>
+              {% for item in items %}
+              <li>{{ item.name }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
           </section>
 
           <!-- Creams -->
           <section>
             <h2 class="text-2xl font-bold mb-3">Creams</h2>
+            {% for base, items in menu.creams.items() %}
             <ul class="list-disc pl-5">
-              {% for cream in menu.creams %}
-              <li>{{ cream }}</li>
+              {% for item in items %}
+              <li>{{ item.name }}</li>
               {% endfor %}
             </ul>
+            {% endfor %}
           </section>
         </div>
       </div>
