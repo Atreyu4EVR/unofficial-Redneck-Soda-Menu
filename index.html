@@ -114,6 +114,53 @@
         color: #ffffff;
         transition: background-color 0.3s, color 0.3s;
       }
+
+      details {
+        margin-bottom: 1rem;
+        border: 1px solid var(--header-color);
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      details > summary {
+        padding: 1rem;
+        background-color: var(--background-color);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+      }
+
+      details > summary:hover {
+        background-color: var(--header-color);
+        color: white;
+      }
+
+      details > summary::after {
+        content: "▼";
+        font-size: 0.8em;
+        transition: transform 0.3s;
+      }
+
+      details[open] > summary::after {
+        transform: rotate(180deg);
+      }
+
+      details > div {
+        padding: 1rem;
+      }
+
+      .menu-section {
+        margin-bottom: 2rem;
+      }
+
+      .menu-section-title {
+        color: var(--header-color);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
     </style>
     <!-- Google Tag Manager -->
     <script>
@@ -153,549 +200,702 @@
           Redneck Soda Menu
         </h1>
 
-        <!-- Regular Drinks -->
-        <div class="flex flex-wrap -mx-2">
-          <div class="w-full md:w-1/2 px-2">
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">Mountain Dew</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Victoria&#39;s Not So Secret:</strong> Mango, Passion
-                  Fruit, Strawberry
-                </li>
+        <!-- Regular Drinks Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Regular Drinks
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Mountain Dew -->
+            <details>
+              <summary class="text-xl font-bold">Mountain Dew</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Victoria&#39;s Not So Secret:</strong> Mango, Passion Fruit, Strawberry
+                  </li>
+                  
+                  <li>
+                    <strong>Florida Georgia Line:</strong> Strawberry, Peach, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Skinny Dippin&#39;:</strong> Peach, Raspberry, Strawberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Over Yonder:</strong> Mango, Peach
+                  </li>
+                  
+                  <li>
+                    <strong>Blue Moon:</strong> Huckleberry, Blueberry, Raspberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Idahomie:</strong> Huckleberry, Raspberry, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Drunk On Soda:</strong> Coconut, Pineapple, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Southern Comfort:</strong> Mango, Pina Colada, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Smelly Armpit:</strong> Blackberry, Peach, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Johnny Lingo:</strong> Mango, Pina Colada, Pineapple, Lime
+                  </li>
+                  
+                  <li>
+                    <strong>Cup of Heaven:</strong> Blue Raspberry, Peach, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Dew Down Under:</strong> Huckleberry, Blackberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Michelley Belly:</strong> Coconut, Peach, Strawberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>The Mistake:</strong> Raspberry, Pina Colada, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Lip Locker:</strong> Coconut, Blackberry, Strawberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Totally Beachin&#39;:</strong> Pina Colada, Strawberry, Watermelon
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
 
-                <li>
-                  <strong>Florida Georgia Line:</strong> Strawberry, Peach,
-                  Cream
-                </li>
+            <!-- Dr Pepper -->
+            <details>
+              <summary class="text-xl font-bold">Dr Pepper</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Blue French Horn:</strong> Blackberry, Pineapple, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Razmaspazz:</strong> Coconut, Raspberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Gator Bite:</strong> Strawberry, Coconut
+                  </li>
+                  
+                  <li>
+                    <strong>Trailer Park Princess:</strong> Peach, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Skeeter Bite:</strong> Coconut, Peach, Mango
+                  </li>
+                  
+                  <li>
+                    <strong>Midnight Snack:</strong> Lime, Pomegranate, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>The Fox:</strong> Coconut, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Dirty Swamp Rat:</strong> Coconut, Fresh Lime
+                  </li>
+                  
+                  <li>
+                    <strong>The Cookout:</strong> Coconut, Mango, Raspberry
+                  </li>
+                  
+                  <li>
+                    <strong>Are You Serious Clark:</strong> Vanilla, Strawberry, Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
 
-                <li>
-                  <strong>Skinny Dippin&#39;:</strong> Peach, Raspberry,
-                  Strawberry, Cream
-                </li>
+            <!-- Pepsi/Coke -->
+            <details>
+              <summary class="text-xl font-bold">Pepsi/Coke</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Cherri Cherry:</strong> SF Black Cherry, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>The Cyd:</strong> Cinnamon, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Fishin&#39; in the Dark:</strong> Orange, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Huckleberry Pickin&#39; Party:</strong> Huckleberry, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Kissin&#39; Kin:</strong> Coconut, Watermelon
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
 
-                <li><strong>Over Yonder:</strong> Mango, Peach</li>
+            <!-- 7UP -->
+            <details>
+              <summary class="text-xl font-bold">7UP</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Redneck Barbie:</strong> Passion Fruit, Tangerine
+                  </li>
+                  
+                  <li>
+                    <strong>Sour Shotgun:</strong> Strawberry, Watermelon
+                  </li>
+                  
+                  <li>
+                    <strong>Blue Jeans:</strong> Blue Curacao, Passion Fruit
+                  </li>
+                  
+                  <li>
+                    <strong>Big Green Tractor:</strong> Green Apple, Peach
+                  </li>
+                  
+                  <li>
+                    <strong>Eliza&#39;s Shortcake:</strong> Cupcake, Strawberry, Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
 
-                <li>
-                  <strong>Blue Moon:</strong> Huckleberry, Blueberry, Raspberry,
-                  Cream
-                </li>
+            <!-- Root Beer -->
+            <details>
+              <summary class="text-xl font-bold">Root Beer</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Miss Tylo Root Beer:</strong> Vanilla, Strawberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Crooked Wand:</strong> Butterscotch, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Drives Me Nuts:</strong> Macadamia Nut, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Shootin&#39; Rooties:</strong> Cupcake, Orange
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
 
-                <li>
-                  <strong>Idahomie:</strong> Huckleberry, Raspberry, Vanilla,
-                  Cream
-                </li>
-
-                <li>
-                  <strong>Drunk On Soda:</strong> Coconut, Pineapple, Cream
-                </li>
-
-                <li>
-                  <strong>Southern Comfort:</strong> Mango, Pina Colada, Cream
-                </li>
-
-                <li>
-                  <strong>Smelly Armpit:</strong> Blackberry, Peach, Vanilla,
-                  Cream
-                </li>
-
-                <li>
-                  <strong>Johnny Lingo:</strong> Mango, Pina Colada, Pineapple,
-                  Lime
-                </li>
-
-                <li>
-                  <strong>Cup of Heaven:</strong> Blue Raspberry, Peach,
-                  Vanilla, Cream
-                </li>
-
-                <li>
-                  <strong>Dew Down Under:</strong> Huckleberry, Blackberry,
-                  Cream
-                </li>
-
-                <li>
-                  <strong>Michelley Belly:</strong> Coconut, Peach, Strawberry,
-                  Cream
-                </li>
-
-                <li>
-                  <strong>The Mistake:</strong> Raspberry, Pina Colada, Cream
-                </li>
-
-                <li>
-                  <strong>Lip Locker:</strong> Coconut, Blackberry, Strawberry,
-                  Cream
-                </li>
-
-                <li>
-                  <strong>Totally Beachin&#39;:</strong> Pina Colada,
-                  Strawberry, Watermelon
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">
-                Blue Powerade, Mountain Dew
-              </h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Blue Lightning:</strong> 1/2 Blue Powerade, 1/2
-                  Mountain Dew, Peach, Strawberry, Cream
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">Dr Pepper</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Blue French Horn:</strong> Blackberry, Pineapple,
-                  Vanilla
-                </li>
-
-                <li><strong>Razmaspazz:</strong> Coconut, Raspberry, Cream</li>
-
-                <li><strong>Gator Bite:</strong> Strawberry, Coconut</li>
-
-                <li>
-                  <strong>Trailer Park Princess:</strong> Peach, Vanilla, Cream
-                </li>
-
-                <li><strong>Skeeter Bite:</strong> Coconut, Peach, Mango</li>
-
-                <li>
-                  <strong>Midnight Snack:</strong> Lime, Pomegranate, Cream
-                </li>
-
-                <li><strong>The Fox:</strong> Coconut, Vanilla, Cream</li>
-
-                <li><strong>Dirty Swamp Rat:</strong> Coconut, Fresh Lime</li>
-
-                <li><strong>The Cookout:</strong> Coconut, Mango, Raspberry</li>
-
-                <li>
-                  <strong>Are You Serious Clark:</strong> Vanilla, Strawberry,
-                  Cream
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">Pepsi/Coke</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Cherri Cherry:</strong> SF Black Cherry, Vanilla,
-                  Cream
-                </li>
-
-                <li><strong>The Cyd:</strong> Cinnamon, Vanilla, Cream</li>
-
-                <li>
-                  <strong>Fishin&#39; in the Dark:</strong> Orange, Vanilla
-                </li>
-
-                <li>
-                  <strong>Huckleberry Pickin&#39; Party:</strong> Huckleberry,
-                  Vanilla, Cream
-                </li>
-
-                <li><strong>Kissin&#39; Kin:</strong> Coconut, Watermelon</li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">7UP</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Redneck Barbie:</strong> Passion Fruit, Tangerine
-                </li>
-
-                <li><strong>Sour Shotgun:</strong> Strawberry, Watermelon</li>
-
-                <li>
-                  <strong>Blue Jeans:</strong> Blue Curacao, Passion Fruit
-                </li>
-
-                <li><strong>Big Green Tractor:</strong> Green Apple, Peach</li>
-
-                <li>
-                  <strong>Eliza&#39;s Shortcake:</strong> Cupcake, Strawberry,
-                  Cream
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">Root Beer</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Miss Tylo Root Beer:</strong> Vanilla, Strawberry,
-                  Cream
-                </li>
-
-                <li><strong>Crooked Wand:</strong> Butterscotch, Cream</li>
-
-                <li>
-                  <strong>Drives Me Nuts:</strong> Macadamia Nut, Vanilla, Cream
-                </li>
-
-                <li><strong>Shootin&#39; Rooties:</strong> Cupcake, Orange</li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">Lemonade</h2>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Fruit Tonic Lemonade:</strong> Guava, Mango,
-                  Raspberry, Watermelon
-                </li>
-
-                <li>
-                  <strong>Pretty Piggy:</strong> Ruby Red Grapefruit, Raspberry,
-                  Vanilla
-                </li>
-
-                <li>
-                  <strong>Lightning Bug:</strong> Mango, Passion Fruit,
-                  Tangerine
-                </li>
-              </ul>
-            </section>
+            <!-- Lemonade -->
+            <details>
+              <summary class="text-xl font-bold">Lemonade</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Fruit Tonic Lemonade:</strong> Guava, Mango, Raspberry, Watermelon
+                  </li>
+                  
+                  <li>
+                    <strong>Pretty Piggy:</strong> Ruby Red Grapefruit, Raspberry, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Lightning Bug:</strong> Mango, Passion Fruit, Tangerine
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
           </div>
-
-          <!-- Energy Drinks -->
-          <div class="w-full md:w-1/2 px-2">
-            <h2 class="text-2xl font-bold mb-3">Energy Drinks</h2>
-
-            <section class="mb-6">
-              <h3 class="text-xl font-semibold mb-2">Mountain Dew</h3>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Farmer&#39;s Daughter:</strong> Lavender, Peach,
-                  Vanilla, Cream
-                </li>
-
-                <li><strong>Matador:</strong> Cherry, Lime, Vanilla</li>
-
-                <li>
-                  <strong>Beachie Keen:</strong> Huckleberry, Raspberry, Vanilla
-                </li>
-
-                <li><strong>Apple Shampoo:</strong> Peach, Vanilla, Cream</li>
-
-                <li>
-                  <strong>Tuker Special:</strong> Mango, Pina Colada, Cream
-                </li>
-
-                <li><strong>Rusty Nail:</strong> Peach, Raspberry</li>
-
-                <li>
-                  <strong>Fluffy Critter:</strong> Coconut, Strawberry,
-                  Tangerine, Cream
-                </li>
-
-                <li><strong>Fuzzy Navel:</strong> Peach, Pina Colada</li>
-
-                <li><strong>Sewer Water:</strong> Pina Colada, Vanilla</li>
-
-                <li><strong>Duck Fart:</strong> Coconut, Raspberry</li>
-
-                <li><strong>Hanky Panky:</strong> Strawberry, Mango, Cream</li>
-
-                <li>
-                  <strong>Shady Lady:</strong> Blackberry, Blueberry, Vanilla
-                </li>
-
-                <li>
-                  <strong>7 Summers:</strong> Mango, Strawberry, Vanilla, Cream
-                </li>
-
-                <li>
-                  <strong>Jungle Juice:</strong> Coconut, Huckleberry, Cream
-                </li>
-
-                <li>
-                  <strong>Precious Peach:</strong> Mango, Passion Fruit,
-                  Pineapple, Cream
-                </li>
-
-                <li>
-                  <strong>Redneck Rose:</strong> Blackberry, Peach, Watermelon,
-                  Cream
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h3 class="text-xl font-semibold mb-2">Lemonade</h3>
-              <ul class="list-disc pl-5">
-                <li>
-                  <strong>Jake&#39;s Hardcore Lemonade:</strong> Peach,
-                  Raspberry, Vanilla
-                </li>
-              </ul>
-            </section>
-
-            <section class="mb-6">
-              <h3 class="text-xl font-semibold mb-2">Dr. Pepper</h3>
-              <ul class="list-disc pl-5">
-                <li><strong>Mighty Tytan:</strong> Coconut</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <!-- Waters -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-3">Waters</h2>
-          <ul class="list-disc pl-5">
-            <li><strong>Backwoods Brew:</strong> Pineapple, Coconut Cream</li>
-
-            <li><strong>Wet N&#39; Wild:</strong> Mango, Watermelon</li>
-
-            <li><strong>Bayou Blues:</strong> Pineapple, Blue Curacao</li>
-
-            <li>
-              <strong>Bless Your Heart:</strong> Guava, Sour Candy, True Lemon
-            </li>
-
-            <li>
-              <strong>Gussied Up:</strong> Passionfruit, Ruby Red Grapefruit
-            </li>
-
-            <li><strong>Splash Down:</strong> Fresh Lime, Coconut Cream</li>
-
-            <li>
-              <strong>Jolly Farmer:</strong> Raspberry Puree, Coconut Cream
-            </li>
-
-            <li>
-              <strong>Redneck Yacht Club:</strong> Pineapple, Berry Puree
-              Coconut Cream
-            </li>
-
-            <li><strong>Lawn Clippings:</strong> Fresh Lime, Coconut Cream</li>
-
-            <li>
-              <strong>River Water:</strong> Blue Raspberry, Red Raspberry,
-              Raspberry, True Lemon
-            </li>
-
-            <li>
-              <strong>Honky Tonk:</strong> Pina Colada Puree, Tangerine, Coconut
-              Cream
-            </li>
-
-            <li>
-              <strong>Solo Cup:</strong> Huckleberry, Pineapple, True Lemon
-            </li>
-
-            <li>
-              <strong>Bubba Mae:</strong> Blackberry, Pomegranate, Fresh Lime,
-              Coconut Cream
-            </li>
-
-            <li>
-              <strong>Squatch Huntin&#39;:</strong> Coconut, Vanilla, Fresh
-              Lime, Coconut Cream
-            </li>
-          </ul>
         </section>
 
-        <!-- Additional sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Sodas -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Sodas</h2>
-
-            <ul class="list-disc pl-5">
-              <li>Pepsi</li>
-
-              <li>Coke</li>
-
-              <li>Diet Pepsi</li>
-
-              <li>Diet Coke</li>
-
-              <li>Pepsi Zero</li>
-
-              <li>Coke Zero</li>
-
-              <li>Wild Cherry Pepsi</li>
-
-              <li>Dr. Pepper</li>
-
-              <li>Mountain Dew</li>
-
-              <li>Diet Dr. Pepper</li>
-
-              <li>Diet Mtn. Dew</li>
-
-              <li>Dr. Pepper Cream Soda</li>
-
-              <li>Mtn. Dew Zero</li>
-
-              <li>7up</li>
-
-              <li>Mtn. Dew Code Red</li>
-
-              <li>Squirt</li>
-
-              <li>Sunkist</li>
-
-              <li>Root Beer</li>
-            </ul>
-          </section>
-
-          <!-- Syrups -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Syrup Flavors</h2>
-
-            <ul class="list-disc pl-5">
-              <li>Apple</li>
-
-              <li>Gingerbread</li>
-
-              <li>Peppermint</li>
-
-              <li>Blackberry</li>
-
-              <li>Grape</li>
-
-              <li>Pina Colada</li>
-
-              <li>Blood Orange</li>
-
-              <li>Green Apple</li>
-
-              <li>Pineapple</li>
-
-              <li>Blueberry</li>
-
-              <li>Guava</li>
-
-              <li>Pomegranate</li>
-
-              <li>Blue Curacao</li>
-
-              <li>Huckleberry</li>
-
-              <li>Pumpkin Spice</li>
-
-              <li>Blue Raspberry</li>
-
-              <li>Kiwi</li>
-
-              <li>Raspberry</li>
-
-              <li>Butterscotch</li>
-
-              <li>Lavender</li>
-
-              <li>Red Raspberry</li>
-
-              <li>Caramel</li>
-
-              <li>Lemon</li>
-
-              <li>Ruby Red Grapefruit</li>
-
-              <li>Cherry</li>
-
-              <li>Lime</li>
-
-              <li>Sour Candy</li>
-
-              <li>Cinnamon</li>
-
-              <li>Macadamia Nut</li>
-
-              <li>Strawberry</li>
-
-              <li>Coconut</li>
-
-              <li>Mango</li>
-
-              <li>Tangerine</li>
-
-              <li>Cranberry</li>
-
-              <li>Orange</li>
-
-              <li>Toasted Marshmallow</li>
-
-              <li>Cupcake</li>
-
-              <li>Passion Fruit</li>
-
-              <li>Vanilla</li>
-
-              <li>Fresh Lime</li>
-
-              <li>Peach</li>
-
-              <li>Watermelon</li>
-
-              <li>Lemonade</li>
-
-              <li>Powerade Mt. Berry</li>
-            </ul>
-          </section>
-
-          <!-- Sugar Free Syrups -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Sugar Free Syrups</h2>
-
-            <ul class="list-disc pl-5">
-              <li>Black Cherry</li>
-
-              <li>Blue Raspberry</li>
-
-              <li>Coconut</li>
-
-              <li>Huckleberry</li>
-
-              <li>Mango Peach</li>
-
-              <li>Pineapple</li>
-
-              <li>Raspberry Strawberry</li>
-
-              <li>Vanilla</li>
-
-              <li>Watermelon</li>
-            </ul>
-          </section>
-
-          <!-- Purees -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Purées</h2>
-
-            <ul class="list-disc pl-5">
-              <li>Mango</li>
-
-              <li>Pina Colada</li>
-
-              <li>Raspberry</li>
-
-              <li>Strawberry</li>
-            </ul>
-          </section>
-
-          <!-- Creams -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Creams</h2>
-
-            <ul class="list-disc pl-5">
-              <li>Half &amp; Half</li>
-
-              <li>Coconut Cream</li>
-            </ul>
-          </section>
-        </div>
+        <!-- Energy Drinks Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Energy Drinks
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <details>
+              <summary class="text-xl font-bold">Mountain Dew</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Farmer&#39;s Daughter:</strong> Silver Ice Rockstar, Mountain Dew, Lavender, Peach, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Matador:</strong> Red Bull, Mountain Dew, Cherry, Lime, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Beachie Keen:</strong> White Red Bull, Mountain Dew, Huckleberry, Raspberry, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Apple Shampoo:</strong> Hardcore Apple Rockstar, Mountain Dew, Peach, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Tuker Special:</strong> Orange Recovery Rockstar, Mountain Dew, Mango, Pina Colada, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Rusty Nail:</strong> Pipeline Monster, Mountain Dew, Peach, Raspberry
+                  </li>
+                  
+                  <li>
+                    <strong>Fluffy Critter:</strong> Ultra Rosa Monster, Mountain Dew, Coconut, Strawberry, Tangerine, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Fuzzy Navel:</strong> Mango Loco Monster, Mountain Dew, Peach, Pina Colada
+                  </li>
+                  
+                  <li>
+                    <strong>Sewer Water:</strong> Orange Recovery Rockstar, Mountain Dew, Pina Colada, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>Duck Fart:</strong> Ultra White Monster, Mountain Dew, Coconut, Raspberry
+                  </li>
+                  
+                  <li>
+                    <strong>Hanky Panky:</strong> Red Bull, Mountain Dew, Strawberry, Mango, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Shady Lady:</strong> Blue Red Bull, Mountain Dew, Blackberry, Blueberry, Vanilla
+                  </li>
+                  
+                  <li>
+                    <strong>7 Summers:</strong> Boom Strawberry Rockstar, Mountain Dew, Mango, Strawberry, Vanilla, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Jungle Juice:</strong> Original Monster, Mountain Dew, Coconut, Huckleberry, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Precious Peach:</strong> Ultra Peachy Keen Monster, Mountain Dew, Mango, Passion Fruit, Pineapple, Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Redneck Rose:</strong> Ultra Rosa Monster, Mountain Dew, Blackberry, Peach, Watermelon, Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Lemonade</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Jake&#39;s Hardcore Lemonade:</strong> Lemonade Recovery Rockstar, Lemonade, Peach, Raspberry, Vanilla
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Dr. Pepper</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Mighty Tytan:</strong> Black Cherry Kickstart, Dr. Pepper, Coconut
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+          </div>
+        </section>
+
+        <!-- Waters Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">Waters</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <details>
+              <summary class="text-xl font-bold">Peach Tea Crystal Light</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Backwoods Brew:</strong> Pineapple, Coconut Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Wet N&#39; Wild:</strong> Mango, Watermelon
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Strawberry Crystal Light Energy</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Bayou Blues:</strong> Pineapple, Blue Curacao
+                  </li>
+                  
+                  <li>
+                    <strong>Bless Your Heart:</strong> Guava, Sour Candy, True Lemon
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Peach Crystal Light</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Gussied Up:</strong> Passionfruit, Ruby Red Grapefruit
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Lemonade Crystal Light</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Splash Down:</strong> Fresh Lime, Coconut Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Jolly Farmer:</strong> Raspberry Puree, Coconut Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Redneck Yacht Club:</strong> Pineapple, Berry Puree Coconut Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Berry Crystal Light</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Lawn Clippings:</strong> Fresh Lime, Coconut Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Raspberry Crystal Light</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>River Water:</strong> Blue Raspberry, Red Raspberry, Raspberry, True Lemon
+                  </li>
+                  
+                  <li>
+                    <strong>Honky Tonk:</strong> Pina Colada Puree, Tangerine, Coconut Cream
+                  </li>
+                  
+                  <li>
+                    <strong>Solo Cup:</strong> Huckleberry, Pineapple, True Lemon
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">N/A</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Bubba Mae:</strong> Blackberry, Pomegranate, Fresh Lime, Coconut Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+            <details>
+              <summary class="text-xl font-bold">Raspberry Crystal Light Energy</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  
+                  <li>
+                    <strong>Squatch Huntin&#39;:</strong> Coconut, Vanilla, Fresh Lime, Coconut Cream
+                  </li>
+                  
+                </ul>
+              </div>
+            </details>
+            
+          </div>
+        </section>
+
+        <!-- Additional Sections -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Additional Items
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Sodas -->
+            <details>
+              <summary class="text-xl font-bold">Sodas</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                   
+                  <li>Pepsi</li>
+                  
+                  <li>Coke</li>
+                  
+                  <li>Diet Pepsi</li>
+                  
+                  <li>Diet Coke</li>
+                  
+                  <li>Pepsi Zero</li>
+                  
+                  <li>Coke Zero</li>
+                  
+                  <li>Wild Cherry Pepsi</li>
+                  
+                  <li>Dr. Pepper</li>
+                  
+                  <li>Mountain Dew</li>
+                  
+                  <li>Diet Dr. Pepper</li>
+                  
+                  <li>Diet Mtn. Dew</li>
+                  
+                  <li>Dr. Pepper Cream Soda</li>
+                  
+                  <li>Mtn. Dew Zero</li>
+                  
+                  <li>7up</li>
+                  
+                  <li>Mtn. Dew Code Red</li>
+                  
+                  <li>Squirt</li>
+                  
+                  <li>Sunkist</li>
+                  
+                  <li>Root Beer</li>
+                   
+                </ul>
+              </div>
+            </details>
+
+            <!-- Syrups -->
+            <details>
+              <summary class="text-xl font-bold">Syrup Flavors</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                   
+                  <li>Apple</li>
+                  
+                  <li>Gingerbread</li>
+                  
+                  <li>Peppermint</li>
+                  
+                  <li>Blackberry</li>
+                  
+                  <li>Grape</li>
+                  
+                  <li>Pina Colada</li>
+                  
+                  <li>Blood Orange</li>
+                  
+                  <li>Green Apple</li>
+                  
+                  <li>Pineapple</li>
+                  
+                  <li>Blueberry</li>
+                  
+                  <li>Guava</li>
+                  
+                  <li>Pomegranate</li>
+                  
+                  <li>Blue Curacao</li>
+                  
+                  <li>Huckleberry</li>
+                  
+                  <li>Pumpkin Spice</li>
+                  
+                  <li>Blue Raspberry</li>
+                  
+                  <li>Kiwi</li>
+                  
+                  <li>Raspberry</li>
+                  
+                  <li>Butterscotch</li>
+                  
+                  <li>Lavender</li>
+                  
+                  <li>Red Raspberry</li>
+                  
+                  <li>Caramel</li>
+                  
+                  <li>Lemon</li>
+                  
+                  <li>Ruby Red Grapefruit</li>
+                  
+                  <li>Cherry</li>
+                  
+                  <li>Lime</li>
+                  
+                  <li>Sour Candy</li>
+                  
+                  <li>Cinnamon</li>
+                  
+                  <li>Macadamia Nut</li>
+                  
+                  <li>Strawberry</li>
+                  
+                  <li>Coconut</li>
+                  
+                  <li>Mango</li>
+                  
+                  <li>Tangerine</li>
+                  
+                  <li>Cranberry</li>
+                  
+                  <li>Orange</li>
+                  
+                  <li>Toasted Marshmallow</li>
+                  
+                  <li>Cupcake</li>
+                  
+                  <li>Passion Fruit</li>
+                  
+                  <li>Vanilla</li>
+                  
+                  <li>Fresh Lime</li>
+                  
+                  <li>Peach</li>
+                  
+                  <li>Watermelon</li>
+                  
+                  <li>Lemonade</li>
+                  
+                  <li>Powerade Mt. Berry</li>
+                   
+                </ul>
+              </div>
+            </details>
+
+            <!-- Sugar Free Syrups -->
+            <details>
+              <summary class="text-xl font-bold">Sugar Free Syrups</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                   
+                  <li>Black Cherry</li>
+                  
+                  <li>Blue Raspberry</li>
+                  
+                  <li>Coconut</li>
+                  
+                  <li>Huckleberry</li>
+                  
+                  <li>Mango Peach</li>
+                  
+                  <li>Pineapple</li>
+                  
+                  <li>Raspberry Strawberry</li>
+                  
+                  <li>Vanilla</li>
+                  
+                  <li>Watermelon</li>
+                   
+                </ul>
+              </div>
+            </details>
+
+            <!-- Purees -->
+            <details>
+              <summary class="text-xl font-bold">Purées</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                   
+                  <li>Mango</li>
+                  
+                  <li>Pina Colada</li>
+                  
+                  <li>Raspberry</li>
+                  
+                  <li>Strawberry</li>
+                   
+                </ul>
+              </div>
+            </details>
+
+            <!-- Creams -->
+            <details>
+              <summary class="text-xl font-bold">Creams</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                   
+                  <li>Half &amp; Half</li>
+                  
+                  <li>Coconut Cream</li>
+                   
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="bg-gray-800 text-white py-8 w-full">

@@ -114,6 +114,53 @@
         color: #ffffff;
         transition: background-color 0.3s, color 0.3s;
       }
+
+      details {
+        margin-bottom: 1rem;
+        border: 1px solid var(--header-color);
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      details > summary {
+        padding: 1rem;
+        background-color: var(--background-color);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+      }
+
+      details > summary:hover {
+        background-color: var(--header-color);
+        color: white;
+      }
+
+      details > summary::after {
+        content: "▼";
+        font-size: 0.8em;
+        transition: transform 0.3s;
+      }
+
+      details[open] > summary::after {
+        transform: rotate(180deg);
+      }
+
+      details > div {
+        padding: 1rem;
+      }
+
+      .menu-section {
+        margin-bottom: 2rem;
+      }
+
+      .menu-section-title {
+        color: var(--header-color);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
     </style>
     <!-- Google Tag Manager -->
     <script>
@@ -153,114 +200,214 @@
           Redneck Soda Menu
         </h1>
 
-        <!-- Regular Drinks -->
-        <div class="flex flex-wrap -mx-2">
-          <div class="w-full md:w-1/2 px-2">
-            {% for base, drinks in menu.drinks.items() %}
-            <section class="mb-6">
-              <h2 class="text-2xl font-bold mb-3">{{ base }}</h2>
-              <ul class="list-disc pl-5">
-                {% for drink in drinks %}
-                <li>
-                  <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
-                </li>
-                {% endfor %}
-              </ul>
-            </section>
-            {% endfor %}
-          </div>
+        <!-- Regular Drinks Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Regular Drinks
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Mountain Dew -->
+            <details>
+              <summary class="text-xl font-bold">Mountain Dew</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['Mountain Dew'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
 
-          <!-- Energy Drinks -->
-          <div class="w-full md:w-1/2 px-2">
-            <h2 class="text-2xl font-bold mb-3">Energy Drinks</h2>
-            {% for base, drinks in menu.energy_drinks.items() %}
-            <section class="mb-6">
-              <h3 class="text-xl font-semibold mb-2">{{ base }}</h3>
-              <ul class="list-disc pl-5">
-                {% for drink in drinks %}
-                <li>
-                  <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
-                </li>
-                {% endfor %}
-              </ul>
-            </section>
-            {% endfor %}
-          </div>
-        </div>
+            <!-- Dr Pepper -->
+            <details>
+              <summary class="text-xl font-bold">Dr Pepper</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['Dr Pepper'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
 
-        <!-- Waters -->
-        <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-3">Waters</h2>
-          <ul class="list-disc pl-5">
-            {% for base, drinks in menu.waters.items() %} {% for drink in drinks
-            %}
-            <li><strong>{{ drink.name }}:</strong> {{ drink.ingredients }}</li>
-            {% endfor %} {% endfor %}
-          </ul>
+            <!-- Pepsi/Coke -->
+            <details>
+              <summary class="text-xl font-bold">Pepsi/Coke</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['Pepsi/Coke'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+
+            <!-- 7UP -->
+            <details>
+              <summary class="text-xl font-bold">7UP</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['7UP'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+
+            <!-- Root Beer -->
+            <details>
+              <summary class="text-xl font-bold">Root Beer</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['Root Beer'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+
+            <!-- Lemonade -->
+            <details>
+              <summary class="text-xl font-bold">Lemonade</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in menu.drinks['Lemonade'] %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </div>
         </section>
 
-        <!-- Additional sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Sodas -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Sodas</h2>
-            {% for base, items in menu.sodas.items() %}
-            <ul class="list-disc pl-5">
-              {% for item in items %}
-              <li>{{ item.name }}</li>
-              {% endfor %}
-            </ul>
+        <!-- Energy Drinks Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Energy Drinks
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for base, drinks in menu.energy_drinks.items() %}
+            <details>
+              <summary class="text-xl font-bold">{{ base }}</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in drinks %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
             {% endfor %}
-          </section>
+          </div>
+        </section>
 
-          <!-- Syrups -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Syrup Flavors</h2>
-            {% for base, items in menu.syrups.items() %}
-            <ul class="list-disc pl-5">
-              {% for item in items %}
-              <li>{{ item.name }}</li>
-              {% endfor %}
-            </ul>
+        <!-- Waters Section -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">Waters</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for base, drinks in menu.waters.items() %}
+            <details>
+              <summary class="text-xl font-bold">{{ base }}</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for drink in drinks %}
+                  <li>
+                    <strong>{{ drink.name }}:</strong> {{ drink.ingredients }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
             {% endfor %}
-          </section>
+          </div>
+        </section>
 
-          <!-- Sugar Free Syrups -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Sugar Free Syrups</h2>
-            {% for base, items in menu.sugar_free_syrups.items() %}
-            <ul class="list-disc pl-5">
-              {% for item in items %}
-              <li>{{ item.name }}</li>
-              {% endfor %}
-            </ul>
-            {% endfor %}
-          </section>
+        <!-- Additional Sections -->
+        <section class="menu-section">
+          <h2 class="menu-section-title text-3xl font-bold mb-6">
+            Additional Items
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Sodas -->
+            <details>
+              <summary class="text-xl font-bold">Sodas</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for base, items in menu.sodas.items() %} {% for item in
+                  items %}
+                  <li>{{ item.name }}</li>
+                  {% endfor %} {% endfor %}
+                </ul>
+              </div>
+            </details>
 
-          <!-- Purees -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Purées</h2>
-            {% for base, items in menu.purees.items() %}
-            <ul class="list-disc pl-5">
-              {% for item in items %}
-              <li>{{ item.name }}</li>
-              {% endfor %}
-            </ul>
-            {% endfor %}
-          </section>
+            <!-- Syrups -->
+            <details>
+              <summary class="text-xl font-bold">Syrup Flavors</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for base, items in menu.syrups.items() %} {% for item in
+                  items %}
+                  <li>{{ item.name }}</li>
+                  {% endfor %} {% endfor %}
+                </ul>
+              </div>
+            </details>
 
-          <!-- Creams -->
-          <section>
-            <h2 class="text-2xl font-bold mb-3">Creams</h2>
-            {% for base, items in menu.creams.items() %}
-            <ul class="list-disc pl-5">
-              {% for item in items %}
-              <li>{{ item.name }}</li>
-              {% endfor %}
-            </ul>
-            {% endfor %}
-          </section>
-        </div>
+            <!-- Sugar Free Syrups -->
+            <details>
+              <summary class="text-xl font-bold">Sugar Free Syrups</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for base, items in menu.sugar_free_syrups.items() %} {% for
+                  item in items %}
+                  <li>{{ item.name }}</li>
+                  {% endfor %} {% endfor %}
+                </ul>
+              </div>
+            </details>
+
+            <!-- Purees -->
+            <details>
+              <summary class="text-xl font-bold">Purées</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for base, items in menu.purees.items() %} {% for item in
+                  items %}
+                  <li>{{ item.name }}</li>
+                  {% endfor %} {% endfor %}
+                </ul>
+              </div>
+            </details>
+
+            <!-- Creams -->
+            <details>
+              <summary class="text-xl font-bold">Creams</summary>
+              <div>
+                <ul class="list-disc pl-5">
+                  {% for base, items in menu.creams.items() %} {% for item in
+                  items %}
+                  <li>{{ item.name }}</li>
+                  {% endfor %} {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="bg-gray-800 text-white py-8 w-full">
