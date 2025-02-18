@@ -177,6 +177,29 @@
         margin-bottom: 1rem;
         text-align: center;
       }
+
+      /* Style for drink items */
+      details ul li {
+        padding-bottom: 0.5rem; /* 8px of bottom padding */
+      }
+
+      /* Style for drink names */
+      details ul li strong {
+        color: var(--header-color);
+      }
+
+      /* Keep the hover effect for the full li, but ensure the text stays properly colored */
+      details ul li:hover {
+        background-color: var(--header-color);
+      }
+
+      details ul li:hover strong {
+        color: white; /* Make drink name white on hover */
+      }
+
+      details ul li:hover {
+        color: white; /* Keep ingredients white on hover */
+      }
     </style>
   </head>
 
@@ -400,57 +423,25 @@
             </details>
           </div>
         </section>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="/disclaimer" class="hover:text-gray-300">Disclaimer</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Atreyu4EVR/unofficial-Redneck-Soda-Menu/discussions/categories/community"
+                class="hover:text-gray-300"
+                >Community</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
-    <footer class="bg-gray-800 text-white py-8 w-full">
-      <div class="px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <h4 class="text-lg font-bold mb-4">About</h4>
-            <p class="text-base font-light">
-              Welcome to the unofficial Redneck Soda Menu website. This
-              independently maintained resource provides easy access to the menu
-              of sodas and specialty drinks offered by Redneck Soda in Rexburg,
-              Idaho. The information presented here is for reference purposes
-              only. As prices may vary, please visit any Redneck Soda location
-              for current pricing information.
-            </p>
-          </div>
-          <div>
-            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li>
-                <a href="disclaimer/index.html" class="hover:text-gray-300"
-                  >Disclaimer</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Atreyu4EVR/unofficial-Redneck-Soda-Menu/discussions/categories/community"
-                  class="hover:text-gray-300"
-                  >Community</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-lg font-bold mb-4">Contact</h4>
-            <ul class="space-y-2">
-              <li>
-                <p class="hover:text-gray-300">
-                  Have questions or suggestions? We welcome your feedback on our
-                  GitHub community page. Join the discussion to help improve
-                  this resource.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <p>© 2025 Unofficial Redneck Soda Menu. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    {% include 'footer.html' %}
     <script>
       const toggle = document.getElementById("theme-toggle");
       toggle.addEventListener("click", () => {

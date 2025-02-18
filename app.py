@@ -103,13 +103,24 @@ def menu():
     menu_data = get_menu_from_csv()
     return render_template('menu.html', menu=menu_data)
 
+@app.route('/disclaimer')
+def disclaimer():
+    return render_template('disclaimer.html')
+
 def generate_static_site():
     menu_data = get_menu_from_csv()
     with app.app_context():
-        rendered = render_template('menu.html', menu=menu_data)
-    with open('index.html', 'w', encoding='utf-8') as f:
-        f.write(rendered)
+        # Generate main menu page
+        rendered_menu = render_template('menu.html', menu=menu_data)
+        with open('index.html', 'w', encoding='utf-8') as f:
+            f.write(rendered_menu)
+            
+        # Generate disclaimer page
+        rendered_disclaimer = render_template('disclaimer.html')
+        with open('disclaimer.html', 'w', encoding='utf-8') as f:
+            f.write(rendered_disclaimer)
+
+    print("Static site generated as index.html and disclaimer.html")
 
 if __name__ == '__main__':
     generate_static_site()
-    print("Static site generated as index.html")
